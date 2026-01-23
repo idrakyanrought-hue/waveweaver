@@ -22,12 +22,12 @@
         <li><a href="#contact">Liên hệ</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-  <a href="index-en.html" title="English">
-    <img src="https://flagcdn.com/w20/gb.png" alt="English">
-  </a>
-</div>
 
+    <div class="lang-switch">
+      <a href="index-en.html" title="English">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English">
+      </a>
+    </div>
   </div>
 </header>
 
@@ -104,7 +104,7 @@
       <div class="solution-card">
         <i class="fa-solid fa-sitemap"></i>
         <h3>Funnels Dễ Dàng</h3>
-        <p> Hành trình từ người muốn biết cho đến người muốn mua.</p>
+        <p>Hành trình từ người muốn biết cho đến người muốn mua.</p>
       </div>
       <div class="solution-card">
         <i class="fa-solid fa-robot"></i>
@@ -121,14 +121,20 @@
     <h2>Liên Hệ</h2>
     <p>Điền thông tin dưới đây, chúng tôi sẽ phản hồi sớm nhất.</p>
 
-    <form action="https://formsubmit.co/idrakyanrought@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
+    <!-- NEW: API-backed form (no FormSubmit) -->
+    <form id="leadForm">
       <input type="text" name="name" placeholder="Tên của bạn" required>
       <input type="email" name="email" placeholder="Email của bạn" required>
       <input type="text" name="company" placeholder="Công ty (không bắt buộc)">
       <textarea name="message" placeholder="Tin nhắn" required></textarea>
+
+      <!-- Keep default mode hybrid -->
+      <input type="hidden" name="mode" value="hybrid">
+
       <button type="submit" class="btn-primary">Gửi</button>
     </form>
+
+    <p id="leadStatus" style="margin-top:12px;"></p>
   </div>
 </section>
 
@@ -140,7 +146,7 @@
     <div class="socials">
       <a href="#"><i class="fa-brands fa-linkedin"></i></a>
       <a href="#"><i class="fa-brands fa-twitter"></i></a>
-      <a href="#"><i class="fa-brands fa-facebook"></i></a>  
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
     </div>
   </div>
 </footer>
@@ -148,7 +154,5 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
 
 
